@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Health Report</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .container {
+            width: 60%;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #3498db;
+        }
+
+        .report-details {
+            margin-top: 20px;
+        }
+
+        .btn-back {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 12px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .btn-back:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>View Health Report</h1>
+        <p>Detailed information of the selected health report</p>
+    </header>
+
+    <div class="container">
+        <h2>Report Details</h2>
+        <div class="report-details">
+            <p><strong>Report ID:</strong> 001</p>
+            <p><strong>Patient Name:</strong> John Doe</p>
+            <p><strong>Doctor Name:</strong> Dr. Smith</p>
+            <p><strong>Date Generated:</strong> 2025-02-27</p>
+            <p><strong>Diagnosis:</strong> Hypertension</p>
+            <p><strong>Prescribed Medications:</strong> Medication A, Medication B</p>
+            <p><strong>Additional Notes:</strong> Regular monitoring is required.</p>
+        </div>
+        <a href="health_reports.html" class="btn-back">Back to Reports</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Patient Health Record System | All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>

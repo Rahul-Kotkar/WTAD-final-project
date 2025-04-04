@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Patient - Confirmation</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            text-align: center;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        
+        .btn-delete {
+            background-color: red;
+            color: white;
+        }
+
+        .btn-cancel {
+            background-color: grey;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Delete Patient</h1>
+        <p>Are you sure you want to delete this patient?</p>
+    </header>
+
+    <div class="container">
+        <h2 id="patientName">Patient Name: Loading...</h2>
+        
+        <button class="btn btn-delete" id="confirmDelete">Yes, Delete</button>
+        <a href="view_patients.html" class="btn btn-cancel">Cancel</a>
+    </div>
+
+    <script>
+        // Get the patient ID from the URL
+        const params = new URLSearchParams(window.location.search);
+        const patientId = params.get("id");
+
+        // Example patient name fetch (Replace with actual database call later)
+        const patients = {
+            1: "John Doe",
+            2: "Jane Smith"
+        };
+
+        document.getElementById("patientName").innerText = "Patient Name: " + (patients[patientId] || "Unknown");
+
+        // Handle delete action
+        document.getElementById("confirmDelete").addEventListener("click", function() {
+            alert("Patient deleted successfully (this will be handled via backend later)");
+            window.location.href = "view_patients.html"; // Redirect back to records page
+        });
+    </script>
+    
+    <footer>
+        <p>&copy; 2025 Patient Health Record System | All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>

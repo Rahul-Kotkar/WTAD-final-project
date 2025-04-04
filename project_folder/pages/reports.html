@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Reports - View All Reports</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .action-buttons {
+            text-align: center;
+        }
+
+        .action-buttons a {
+            text-decoration: none;
+            padding: 6px 12px;
+            background-color: #2980b9;
+            color: white;
+            border-radius: 5px;
+            margin: 2px;
+        }
+
+        .action-buttons a:hover {
+            background-color: #21618c;
+        }
+
+        .btn-add {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 12px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn-add:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Health Reports</h1>
+        <p>View and manage patient health reports</p>
+    </header>
+
+    <div class="container">
+        <h2>All Reports</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Report ID</th>
+                    <th>Patient Name</th>
+                    <th>Report Type</th>
+                    <th>Date Generated</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sample Data: Replace with dynamic data from your database -->
+                <tr>
+                    <td>1</td>
+                    <td>John Doe</td>
+                    <td>Blood Test</td>
+                    <td>2025-02-28</td>
+                    <td class="action-buttons">
+                        <a href="view_report.html?id=1">View</a>
+                        <a href="delete_report.html?id=1">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jane Smith</td>
+                    <td>X-Ray</td>
+                    <td>2025-03-01</td>
+                    <td class="action-buttons">
+                        <a href="view_report.html?id=2">View</a>
+                        <a href="delete_report.html?id=2">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="generate_report.html" class="btn-add">Generate New Report</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Patient Health Record System | All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>

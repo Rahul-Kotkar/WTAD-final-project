@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Health Report - Patient Health Record System</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .container {
+            width: 60%;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .btn {
+            padding: 12px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn-delete {
+            background-color: #e74c3c;
+            color: white;
+        }
+        .btn-delete:hover {
+            background-color: #c0392b;
+        }
+        .btn-cancel {
+            background-color: #95a5a6;
+            color: white;
+        }
+        .btn-cancel:hover {
+            background-color: #7f8c8d;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Delete Health Report</h1>
+        <p>Are you sure you want to delete this health report?</p>
+    </header>
+
+    <div class="container">
+        <p><strong>Report ID:</strong> 12345</p>
+        <p><strong>Patient Name:</strong> John Doe</p>
+        <p><strong>Generated Date:</strong> 2025-02-27</p>
+        
+        <form action="delete_report.php" method="POST">
+            <input type="hidden" name="report_id" value="12345">
+            <button type="submit" class="btn btn-delete">Delete Report</button>
+            <a href="view_reports.html" class="btn btn-cancel">Cancel</a>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Patient Health Record System | All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>

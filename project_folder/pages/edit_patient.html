@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Patient - Patient Records</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        form {
+            width: 60%;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .btn-submit {
+            padding: 12px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-submit:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Edit Patient Record</h1>
+        <p>Update the details of the patient</p>
+    </header>
+
+    <div class="container">
+        <form action="update_patient.php" method="POST">
+            <!-- Assume this data comes dynamically from the server -->
+            <input type="hidden" name="patient_id" value="1">
+
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" value="John" required>
+
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" value="Doe" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" value="1985-01-15" required>
+
+            <label for="contact">Contact Number:</label>
+            <input type="tel" id="contact" name="contact" value="123-456-7890" required>
+
+            <label for="emergency_contact">Emergency Contact:</label>
+            <input type="tel" id="emergency_contact" name="emergency_contact" value="987-654-3210" required>
+
+            <label for="medical_history">Medical History:</label>
+            <textarea id="medical_history" name="medical_history">Some medical history...</textarea>
+
+            <label for="allergies">Allergies:</label>
+            <textarea id="allergies" name="allergies">None</textarea>
+
+            <label for="medications">Current Medications:</label>
+            <textarea id="medications" name="medications">None</textarea>
+
+            <button type="submit" class="btn-submit">Update Patient</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Patient Health Record System | All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>
